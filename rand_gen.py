@@ -24,3 +24,5 @@ if __name__ == "__main__":
         for line in lines:
             f.write(line)
             
+    #os.system("git add .; git commit -m {0}; git push origin master".format(ts))
+            
