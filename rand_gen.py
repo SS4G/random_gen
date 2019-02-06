@@ -1,5 +1,5 @@
 import random
-import sys
+import os
 import datetime as dt
 if __name__ == "__main__":
     FILE_NUM = 520
@@ -24,5 +24,5 @@ if __name__ == "__main__":
         for line in lines:
             f.write(line)
             
-    #os.system("git add .; git commit -m {0}; git push origin master".format(ts))
+    os.system("git add .; git commit -m {0}; git push origin master".format(ts))
             
