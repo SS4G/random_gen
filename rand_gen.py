@@ -3,6 +3,7 @@ import os
 import datetime as dt
 if __name__ == "__main__":
     FILE_NUM = 520
+    os.system("git pull origin master")
     ts = dt.datetime.now().strftime("%Y%m%d-%H:%M:%S")
     with open("rec.dat", "r") as f:
         lines = [i for i in f.readlines()]
@@ -20,9 +21,9 @@ if __name__ == "__main__":
             break
         
     with open("rec.dat", "w") as f:
-        lines.append("{0}\t{1}\n".format(rand_num, ts))
+        lines.append("{0}\t{1}\n".format("%03d" % rand_num, ts))
         for line in lines:
             f.write(line)
             
-    os.system("git add .; git commit -m {0}; git push origin master".format(ts))
+    os.system("git add .; git commit -m {0}; git push origin master")
             
